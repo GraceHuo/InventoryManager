@@ -1,0 +1,23 @@
+{
+  "name": "inventory_manager_ui",
+  "version": "1.0.0",
+  "description": "Home inventory management system",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "inventory"
+  ],
+  "author": "Grace Huo",
+  "license": "ISC",
+  "dependencies": {
+    "del": "^3.0.0",
+    "gulp-webserver": "^0.9.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-inject": "^4.3.2",
+    "main-bower-files": "^2.13.1"
+  }
+}

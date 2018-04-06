@@ -1,0 +1,23 @@
+{
+  "name": "inventory_manager_ui",
+  "description": "Home inventory management system",
+  "main": "app.js",
+  "authors": [
+    "Grace Huo"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "inventory"
+  ],
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5"
+  }
+}
