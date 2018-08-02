@@ -9,13 +9,20 @@ export class LocationService {
     let subject = new Subject<ILocation[]>()
     setTimeout(() => {
       subject.next(LOCATIONS)
-      subject.complete()
-    }, 100)
-    return subject
+      subject.complete();
+    }, 100);
+    return subject;
   }
 
   getLocation(id: number) {
     return LOCATIONS.find(location => location.id === id)
+  }
+
+  saveLocation(location) {
+    console.log('location', location);
+    location.id = 999;
+    location.items = [];
+    LOCATIONS.push(location);
   }
 }
 

@@ -1,5 +1,7 @@
-import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import {
   LocationsListComponent,
@@ -7,14 +9,14 @@ import {
   LocationService,
   LocationDetailsComponent,
   CreateLocationComponent,
+  CreateItemComponent,
   LocationRouteActivator,
   LocationListResolver
-} from './locations/index'
+} from './locations/index';
 
 import {InventoryAppComponent} from './inventory-app.component';
 import {NavBarComponent} from './nav/nav-bar.component';
 import {ToastrService} from './common/toastr.service';
-import {RouterModule} from '@angular/router';
 import {appRoutes} from './routes';
 import {Error404Component} from './errors/404.component';
 import {AuthService} from './user/auth.service';
@@ -26,6 +28,7 @@ import {AuthService} from './user/auth.service';
     LocationThumbnailComponent,
     LocationDetailsComponent,
     CreateLocationComponent,
+    CreateItemComponent,
     NavBarComponent,
     Error404Component
   ],
@@ -42,6 +45,8 @@ import {AuthService} from './user/auth.service';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(appRoutes)
   ],
   bootstrap: [InventoryAppComponent]
@@ -50,7 +55,8 @@ export class AppModule {
 }
 
 function checkDirtyState(component: CreateLocationComponent) {
-  if (component.isDirty)
-    return window.confirm('You have not saved this event, do you really want to cancel?')
-  return true
+  if (component.isDirty) {
+    return window.confirm('You have not saved this event, do you really want to cancel?');
+  }
+  return true;
 }

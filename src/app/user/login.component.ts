@@ -4,11 +4,14 @@ import {AuthService} from './auth.service';
 
 @Component({
   templateUrl: './login.component.html',
+  styles: [`
+    em { float:right; color:#E05C65; padding-top:4px; font-size: 12px}
+  `]
 })
 export class LoginComponent {
-  username
-  password
-  mouseoverLogin
+  username;
+  password;
+  mouseoverLogin;
 
   constructor(private authService: AuthService, private router: Router) {
 
@@ -16,10 +19,10 @@ export class LoginComponent {
 
   login(formValues) {
     this.authService.loginUser(formValues.userName, formValues.password)
-    this.router.navigate(['locations'])
+    this.router.navigate(['locations']);
   }
 
   cancel() {
-    this.router.navigate(['locations'])
+    this.router.navigate(['locations']);
   }
 }

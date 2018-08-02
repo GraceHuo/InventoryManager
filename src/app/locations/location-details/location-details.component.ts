@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core'
-import {LocationService} from '../shared/location.service'
-import {ActivatedRoute} from '@angular/router'
+import {Component, OnInit} from '@angular/core';
+import {LocationService} from '../shared/location.service';
+import {ActivatedRoute} from '@angular/router';
 import {ILocation} from '../shared/index';
 
 
@@ -18,13 +18,13 @@ import {ILocation} from '../shared/index';
   `]
 })
 export class LocationDetailsComponent implements OnInit {
-  location: ILocation
+  location: ILocation;
 
   constructor(private locationService: LocationService, private route: ActivatedRoute) {
 
   }
 
   ngOnInit() {
-    this.location = this.locationService.getLocation(+this.route.snapshot.params['id'])
+    this.location = this.locationService.getLocation(+this.route.snapshot.params['id']);
   }
 }
