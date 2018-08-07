@@ -7,4 +7,19 @@
       <div *ngIf="location?.description"><strong>Description:</strong> {{location?.description}}</div>
     </div>
   </div>
+
+  <hr>
+
+  <div class="row">
+    <div class="col-md-2">
+      <h3 style="margin:0">Items</h3>
+    </div>
+    <div class="col-md-2">
+      <a (click)="addItem()">Add Item</a>
+    </div>
+  </div>
+
+  <item-list *ngIf="!addMode" [items]="location?.items"></item-list>
+
+  <create-item *ngIf="addMode" (saveNewItem)="saveNewItem($event)" (cancelAddItem)="cancelAddItem()"></create-item>
 </div>

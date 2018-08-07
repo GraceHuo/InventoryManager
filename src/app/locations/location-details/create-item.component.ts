@@ -1,9 +1,10 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {IItem} from '../shared/location.model';
 
 
 @Component({
+  selector: 'create-item',
   templateUrl: './create-item.component.html',
   styles: [`
     em {
@@ -34,6 +35,9 @@ import {IItem} from '../shared/location.model';
   `]
 })
 export class CreateItemComponent implements OnInit {
+  @Output() saveNewItem = new EventEmitter();
+  @Output() cancelAddItem = new EventEmitter();
+
   newItemForm: FormGroup;
   name: FormControl;
   description: FormControl;
@@ -70,6 +74,10 @@ export class CreateItemComponent implements OnInit {
       quantity: +formValues.quantity,
       price: +formValues.price
     };
-    console.log(item);
+    this.saveNewItem.emit(item);
+  }
+
+  cancel() {
+    this.cancelAddItem.emit();
   }
 }

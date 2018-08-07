@@ -3,6 +3,7 @@ export  interface ILocation {
   name: string;
   description?: string;
   imageUrl: string;
+  items: IItem[];
 }
 
 export  interface IItem {

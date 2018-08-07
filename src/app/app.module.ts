@@ -11,7 +11,8 @@ import {
   CreateLocationComponent,
   CreateItemComponent,
   LocationRouteActivator,
-  LocationListResolver
+  LocationListResolver,
+  ItemListComponent
 } from './locations/index';
 
 import {InventoryAppComponent} from './inventory-app.component';
@@ -30,6 +31,7 @@ import {AuthService} from './user/auth.service';
     CreateLocationComponent,
     CreateItemComponent,
     NavBarComponent,
+    ItemListComponent,
     Error404Component
   ],
   providers: [
