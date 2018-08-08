@@ -1,10 +1,15 @@
 <div class="row" *ngFor="let item of items">
   <div class="col-md-10">
-    <div class="well">
-      <h4>{{item.name}}</h4>
-      <h6>{{item.description}}</h6>
-      <p>{{item.quantity}}</p>
-      <p>{{item.price}}</p>
-    </div>
+    <collapsible-well>
+      <div well-title>
+        {{item.name}}
+        <i *ngIf="item.price > 50" class="glyphicon glyphicon-star" style="color:red"></i>
+      </div>
+      <div well-body>
+        <h6>{{item.description}}</h6>
+        <p>{{item.quantity}}</p>
+        <p>{{item.price}}</p>
+      </div>
+    </collapsible-well>
   </div>
 </div>

@@ -53,7 +53,7 @@ const LOCATIONS: ILocation[] = [
         imageUrl: 'img2',
         categories: [0, 1],
         quantity: 4,
-        price: 50
+        price: 60
       }
     ]
   },
