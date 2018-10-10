@@ -1,4 +1,4 @@
-export  interface ILocation {
+export interface ILocation {
   id: number;
   name: string;
   description?: string;
@@ -6,12 +6,13 @@ export  interface ILocation {
   items: IItem[];
 }
 
-export  interface IItem {
+export interface IItem {
   id: number;
   name: string;
+  createdDate?: Date;
   description?: string;
   imageUrl: string;
   categories: number[];
   quantity: number;
-  price: number;
+  price?: number;
 }

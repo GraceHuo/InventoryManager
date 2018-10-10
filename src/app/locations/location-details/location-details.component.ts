@@ -25,6 +25,8 @@ import {IItem} from '../shared/location.model';
 export class LocationDetailsComponent implements OnInit {
   location: ILocation;
   addMode: boolean;
+  searchCriteria: string;
+  sortBy = 'name';
 
   constructor(private locationService: LocationService, private route: ActivatedRoute) {
 

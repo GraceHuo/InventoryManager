@@ -23,6 +23,7 @@ import {CollapsibleWellComponent} from './common/collapsible-well.component';
 import {appRoutes} from './routes';
 import {Error404Component} from './errors/404.component';
 import {AuthService} from './user/auth.service';
+import {CapitalizeFirstLettersPipe} from './locations/shared/capitalizeFirstLetters.pipe';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import {AuthService} from './user/auth.service';
     NavBarComponent,
     ItemListComponent,
     CollapsibleWellComponent,
-    Error404Component
+    Error404Component,
+    CapitalizeFirstLettersPipe
   ],
   providers: [
     LocationService,

@@ -33,7 +33,7 @@ export class LocationService {
 const LOCATIONS: ILocation[] = [
   {
     id: 1,
-    name: 'Storage1',
+    name: 'Storage place 1',
     imageUrl: '/assets/images/angularconnect-shield.png',
     description: 'description1',
     items: [
@@ -42,6 +42,7 @@ const LOCATIONS: ILocation[] = [
         name: 'name1',
         description: 'desc',
         imageUrl: 'img1',
+        createdDate: new Date('9/26/2018'),
         categories: [0, 1],
         quantity: 10,
         price: 10
@@ -51,6 +52,7 @@ const LOCATIONS: ILocation[] = [
         name: 'name2',
         description: 'desc2',
         imageUrl: 'img2',
+        createdDate: new Date('9/26/2019'),
         categories: [0, 1],
         quantity: 4,
         price: 60

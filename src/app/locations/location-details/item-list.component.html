@@ -1,14 +1,15 @@
-<div class="row" *ngFor="let item of items">
+<div class="row" *ngFor="let item of visibleItems">
   <div class="col-md-10">
     <collapsible-well>
       <div well-title>
         {{item.name}}
-        <i *ngIf="item.price > 50" class="glyphicon glyphicon-star" style="color:red"></i>
+        <i *ngIf="item.price> 50" class="glyphicon glyphicon-star" style="color:red"></i>
       </div>
       <div well-body>
-        <h6>{{item.description}}</h6>
-        <p>{{item.quantity}}</p>
-        <p>{{item.price}}</p>
+        <p *ngIf="item.description">Description: {{item.description}}</p>
+        <p *ngIf="item.createdDate">Created Date: {{item.createdDate | date}}</p>
+        <p> Quantities: {{item.quantity}}</p>
+        <p *ngIf="item.price">Price: {{item.price | currency:'USD'}}</p>
       </div>
     </collapsible-well>
   </div>

@@ -5,7 +5,7 @@ import {ILocation} from './shared/index';
   selector: 'location-thumbnail',
   template: `
     <div [routerLink]="['/locations', location.id]" class="well hoverwell thumbnail">
-      <h2>Name: {{location.name}}</h2>
+      <h2>Name: {{location.name | capitalizeFirstLetters}}</h2>
       <div *ngIf="location.description">Description: {{location.description}}</div>
     </div>`,
   styles: [`
